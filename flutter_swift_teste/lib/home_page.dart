@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_swift_teste/components/arrow_widget.dart';
 
 import 'components/analog.dart';
 import 'components/button_widget.dart';
@@ -22,6 +23,11 @@ class _HomePageState extends State<HomePage> {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
+      // body: Center(
+      //   child: const ArrowWidget(
+      //     size: 100,
+      //   ),
+      // ),
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(

@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'arrow_widget.dart';
+
 enum Button { up, left, down, right, x, y, b, a }
 
 class ButtonWidget extends StatelessWidget {
@@ -64,8 +66,7 @@ class ButtonWidget extends StatelessWidget {
       gradientFront = gradientVerticalFront;
       if (button == Button.up) {
         filho = LayoutBuilder(builder: (context, constraints) {
-          return Icon(
-            Icons.home,
+          return ArrowWidget(
             size: constraints.maxWidth * 0.40,
           );
         });
@@ -86,9 +87,9 @@ class ButtonWidget extends StatelessWidget {
       gradientFront = gradientVerticalFront;
       if (button == Button.left) {
         filho = LayoutBuilder(builder: (context, constraints) {
-          return Icon(
-            Icons.home,
-            size: constraints.maxHeight * 0.40,
+          return ArrowWidget(
+            direction: Direction.left,
+            size: constraints.maxWidth * 0.40,
           );
         });
       } else if (button == Button.y) {
@@ -108,9 +109,9 @@ class ButtonWidget extends StatelessWidget {
       gradientFront = gradientDiagonalFront;
       if (button == Button.down) {
         filho = LayoutBuilder(builder: (context, constraints) {
-          return Icon(
-            Icons.home,
-            size: constraints.maxHeight * 0.40,
+          return ArrowWidget(
+            direction: Direction.down,
+            size: constraints.maxWidth * 0.40,
           );
         });
       } else if (button == Button.b) {
@@ -131,8 +132,8 @@ class ButtonWidget extends StatelessWidget {
       gradientFront = gradientDiagonalFront;
       if (button == Button.right) {
         filho = LayoutBuilder(builder: (context, constraints) {
-          return Icon(
-            Icons.home,
+          return ArrowWidget(
+            direction: Direction.right,
             size: constraints.maxWidth * 0.40,
           );
         });
