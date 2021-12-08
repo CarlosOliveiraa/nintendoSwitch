@@ -33,14 +33,16 @@ class ArrowWidget extends StatelessWidget {
         directionArrow = 0;
     }
 
-    return RotatedBox(
-      quarterTurns: directionArrow,
-      child: ClipPath(
-        clipper: LogoClipper(),
-        child: Container(
-          width: size,
-          height: size,
-          color: const Color(0xff182022),
+    return Center(
+      child: RotatedBox(
+        quarterTurns: directionArrow,
+        child: ClipPath(
+          clipper: LogoClipper(),
+          child: Container(
+            width: size,
+            height: size,
+            color: const Color(0xff182022),
+          ),
         ),
       ),
     );
