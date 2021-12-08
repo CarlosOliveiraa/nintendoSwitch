@@ -11,31 +11,58 @@ class LogoWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipPath(
-      clipper: LogoClip(),
+      clipper: LogoClipper(),
       child: Container(
         width: size,
         height: size,
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(50),
+          borderRadius: BorderRadius.circular(40),
         ),
       ),
     );
   }
 }
 
-class LogoClip extends CustomClipper<Path> {
+class LogoClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     final maxX = size.width;
     final maxY = size.height;
-    var path = Path();
-    path.moveTo(maxX * 0.5, maxY * 0.1);
-    path.lineTo(0.0, maxY * 0.9);
-    path.lineTo(maxX, maxY * 0.9);
-    path.relativeConicTo(maxX * 50, maxY * 90, maxX, maxY / 1000, maxX * 10);
+    double radius = 30;
 
-    return path;
+    Path path1 = Path();
+
+    path1.lineTo(0, maxY);
+    path1.lineTo(0, maxY);
+    path1.lineTo(maxX / 2.3, maxY);
+    path1.lineTo(maxX / 2.3, 0);
+
+    path1.addRRect(RRect.fromRectAndCorners(
+      Rect.fromLTWH(10, maxY - 145, 50, 131),
+      topLeft: Radius.circular(radius),
+      bottomLeft: Radius.circular(radius),
+    ));
+
+    path1.addRRect(
+      RRect.fromRectAndRadius(
+        const Rect.fromLTWH(21, 40, 30, 30),
+        Radius.circular(radius),
+      ),
+    );
+    Path path2 = Path();
+
+    path2.lineTo(0, maxY);
+    path2.lineTo(0, maxY);
+    path2.lineTo(maxX / .5, maxY);
+    path2.lineTo(maxX / .5, 0);
+
+    path2.addRRect(RRect.fromRectAndRadius(
+        const Rect.fromLTWH(15, 70, 37.3, 37.3), Radius.circular(radius)));
+
+    path1.addPath(path2, Offset(maxX - 70, 0));
+
+    return path1;
   }
 
   @override
