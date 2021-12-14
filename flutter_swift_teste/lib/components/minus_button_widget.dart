@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//WIDGET CORRESPONDENTE AO COMPONENTE DE BOTÃO - DA TELA HOME LADO AZUL
 class MinusButtonWidget extends StatelessWidget {
   final double width;
   final double heigth;
