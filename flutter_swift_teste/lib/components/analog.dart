@@ -11,8 +11,8 @@ class AnalogButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: size,
-      height: size,
+      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height,
       alignment: Alignment.center,
       decoration: BoxDecoration(
         shape: BoxShape.circle,

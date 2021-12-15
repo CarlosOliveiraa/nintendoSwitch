@@ -6,10 +6,10 @@ class ArrowWidget extends StatelessWidget {
   final double size;
   final Direction direction;
 
-  const ArrowWidget({
+  const ArrowWidget(
+    this.direction, {
     Key? key,
     this.size = 9,
-    this.direction = Direction.up,
   }) : super(key: key);
 
   @override

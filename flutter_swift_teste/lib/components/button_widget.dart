@@ -10,6 +10,7 @@ enum Button { up, left, down, right, x, y, b, a }
 class ButtonWidget extends StatelessWidget {
   final Button button;
   final double size;
+  final Widget child;
   final style = const TextStyle(
     fontSize: 15,
     fontWeight: FontWeight.w300,
@@ -20,6 +21,7 @@ class ButtonWidget extends StatelessWidget {
     Key? key,
     this.size = 28.08,
     required this.button,
+    this.child = const SizedBox(),
   }) : super(key: key);
 
   @override
@@ -65,11 +67,7 @@ class ButtonWidget extends StatelessWidget {
       gradientBack = gradientVerticalBack;
       gradientFront = gradientVerticalFront;
       if (button == Button.up) {
-        filho = LayoutBuilder(builder: (context, constraints) {
-          return ArrowWidget(
-            size: constraints.maxWidth * 0.40,
-          );
-        });
+        filho = child;
       } else if (button == Button.x) {
         filho = LayoutBuilder(builder: (context, contraints) {
           return Center(
@@ -86,12 +84,7 @@ class ButtonWidget extends StatelessWidget {
       gradientBack = gradientVerticalBack;
       gradientFront = gradientVerticalFront;
       if (button == Button.left) {
-        filho = LayoutBuilder(builder: (context, constraints) {
-          return ArrowWidget(
-            direction: Direction.left,
-            size: constraints.maxWidth * 0.40,
-          );
-        });
+        filho = child;
       } else if (button == Button.y) {
         filho = LayoutBuilder(builder: (context, contraints) {
           return Center(
@@ -108,12 +101,7 @@ class ButtonWidget extends StatelessWidget {
       gradientBack = gradientDiagonalBack;
       gradientFront = gradientDiagonalFront;
       if (button == Button.down) {
-        filho = LayoutBuilder(builder: (context, constraints) {
-          return ArrowWidget(
-            direction: Direction.down,
-            size: constraints.maxWidth * 0.40,
-          );
-        });
+        filho = child;
       } else if (button == Button.b) {
         filho = Center(
           child: LayoutBuilder(builder: (context, contraints) {
@@ -131,12 +119,7 @@ class ButtonWidget extends StatelessWidget {
       gradientBack = gradientDiagonalBack;
       gradientFront = gradientDiagonalFront;
       if (button == Button.right) {
-        filho = LayoutBuilder(builder: (context, constraints) {
-          return ArrowWidget(
-            direction: Direction.right,
-            size: constraints.maxWidth * 0.40,
-          );
-        });
+        filho = child;
       } else if (button == Button.a) {
         filho = LayoutBuilder(builder: (context, contraints) {
           return Center(

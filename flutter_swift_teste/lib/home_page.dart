@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_swift_teste/components/arrow_widget.dart';
 import 'package:flutter_swift_teste/components/lamp_column_left_widget.dart';
 
 import 'components/analog.dart';
@@ -12,6 +13,7 @@ import 'components/plus_button_widget.dart';
 import 'components/screen.dart';
 import 'components/side_widget.dart';
 import 'components/sound_widget.dart';
+import 'sides/left_side_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -63,6 +65,9 @@ class _HomePageState extends State<HomePage> {
                   width: size.width * 0.32,
                   height: size.height * 0.38,
                   side: Side.left,
+                  // child: const LeftSideWidget(
+                  //   padding: EdgeInsets.fromLTRB(13.59, 13.59, 14.04, 12.69),
+                  // ),
                   child: Stack(
                     // ignore: prefer_const_literals_to_create_immutables
                     children: [
@@ -85,28 +90,40 @@ class _HomePageState extends State<HomePage> {
                         left: 51.63,
                         right: 43.48,
                         bottom: 110.56,
-                        child: ButtonWidget(button: Button.up),
+                        child: ButtonWidget(
+                          button: Button.up,
+                          child: ArrowWidget(Direction.up),
+                        ),
                       ),
                       const Positioned(
                         top: 146.36,
                         left: 23.1,
                         right: 72.01,
                         bottom: 82.92,
-                        child: ButtonWidget(button: Button.left),
+                        child: ButtonWidget(
+                          button: Button.left,
+                          child: ArrowWidget(Direction.left),
+                        ),
                       ),
                       const Positioned(
                         top: 146.36,
                         left: 81.07,
                         right: 14.04,
                         bottom: 82.92,
-                        child: ButtonWidget(button: Button.right),
+                        child: ButtonWidget(
+                          button: Button.right,
+                          child: ArrowWidget(Direction.right),
+                        ),
                       ),
                       const Positioned(
                         top: 174.0,
                         left: 51.63,
                         right: 43.48,
                         bottom: 55.28,
-                        child: ButtonWidget(button: Button.down),
+                        child: ButtonWidget(
+                          button: Button.down,
+                          child: ArrowWidget(Direction.down),
+                        ),
                       ),
                       const Positioned(
                         top: 221.12,
