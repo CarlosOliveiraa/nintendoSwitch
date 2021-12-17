@@ -18,6 +18,7 @@ class SideWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size.width;
     late Decoration decoration;
 
     switch (side) {

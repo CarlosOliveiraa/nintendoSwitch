@@ -65,75 +65,76 @@ class _HomePageState extends State<HomePage> {
                   width: size.width * 0.32,
                   height: size.height * 0.38,
                   side: Side.left,
+                  child: const LeftSideWidget(),
                   // child: const LeftSideWidget(
                   //   padding: EdgeInsets.fromLTRB(13.59, 13.59, 14.04, 12.69),
                   // ),
-                  child: Stack(
-                    // ignore: prefer_const_literals_to_create_immutables
-                    children: [
-                      const Positioned(
-                        top: 14.5,
-                        left: 14.5,
-                        right: 89.67,
-                        bottom: 236.53,
-                        child: MinusButtonWidget(),
-                      ),
-                      const Positioned(
-                        top: 45.77,
-                        left: 37.59,
-                        right: 28.53,
-                        bottom: 154.06,
-                        child: AnalogButtonWidget(),
-                      ),
-                      const Positioned(
-                        top: 118.72,
-                        left: 51.63,
-                        right: 43.48,
-                        bottom: 110.56,
-                        child: ButtonWidget(
-                          button: Button.up,
-                          child: ArrowWidget(Direction.up),
-                        ),
-                      ),
-                      const Positioned(
-                        top: 146.36,
-                        left: 23.1,
-                        right: 72.01,
-                        bottom: 82.92,
-                        child: ButtonWidget(
-                          button: Button.left,
-                          child: ArrowWidget(Direction.left),
-                        ),
-                      ),
-                      const Positioned(
-                        top: 146.36,
-                        left: 81.07,
-                        right: 14.04,
-                        bottom: 82.92,
-                        child: ButtonWidget(
-                          button: Button.right,
-                          child: ArrowWidget(Direction.right),
-                        ),
-                      ),
-                      const Positioned(
-                        top: 174.0,
-                        left: 51.63,
-                        right: 43.48,
-                        bottom: 55.28,
-                        child: ButtonWidget(
-                          button: Button.down,
-                          child: ArrowWidget(Direction.down),
-                        ),
-                      ),
-                      const Positioned(
-                        top: 221.12,
-                        bottom: 12.69,
-                        left: 13.59,
-                        right: 86.05,
-                        child: SoundWidget(),
-                      ),
-                    ],
-                  ),
+                  // child: Stack(
+                  //   // ignore: prefer_const_literals_to_create_immutables
+                  //   children: [
+                  //     const Positioned(
+                  //       top: 14.5,
+                  //       left: 14.5,
+                  //       right: 89.67,
+                  //       bottom: 236.53,
+                  //       child: MinusButtonWidget(),
+                  //     ),
+                  //     const Positioned(
+                  //       top: 45.77,
+                  //       left: 37.59,
+                  //       right: 28.53,
+                  //       bottom: 154.06,
+                  //       child: AnalogButtonWidget(),
+                  //     ),
+                  //     const Positioned(
+                  //       top: 118.72,
+                  //       left: 51.63,
+                  //       right: 43.48,
+                  //       bottom: 110.56,
+                  //       child: ButtonWidget(
+                  //         button: Button.up,
+                  //         child: ArrowWidget(Direction.up),
+                  //       ),
+                  //     ),
+                  //     const Positioned(
+                  //       top: 146.36,
+                  //       left: 23.1,
+                  //       right: 72.01,
+                  //       bottom: 82.92,
+                  //       child: ButtonWidget(
+                  //         button: Button.left,
+                  //         child: ArrowWidget(Direction.left),
+                  //       ),
+                  //     ),
+                  //     const Positioned(
+                  //       top: 146.36,
+                  //       left: 81.07,
+                  //       right: 14.04,
+                  //       bottom: 82.92,
+                  //       child: ButtonWidget(
+                  //         button: Button.right,
+                  //         child: ArrowWidget(Direction.right),
+                  //       ),
+                  //     ),
+                  //     const Positioned(
+                  //       top: 174.0,
+                  //       left: 51.63,
+                  //       right: 43.48,
+                  //       bottom: 55.28,
+                  //       child: ButtonWidget(
+                  //         button: Button.down,
+                  //         child: ArrowWidget(Direction.down),
+                  //       ),
+                  //     ),
+                  //     const Positioned(
+                  //       top: 221.12,
+                  //       bottom: 12.69,
+                  //       left: 13.59,
+                  //       right: 86.05,
+                  //       child: SoundWidget(),
+                  //     ),
+                  //   ],
+                  // ),
                 ),
                 const LampColumnLeft(),
                 LogoWidget(
