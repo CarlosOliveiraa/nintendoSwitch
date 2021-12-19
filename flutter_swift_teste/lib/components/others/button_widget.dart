@@ -1,9 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:google_fonts/google_fonts.dart';
 
-import 'arrow_widget.dart';
+import '../rightside/text_widget.dart';
 
 enum Button { up, left, down, right, x, y, b, a }
 
@@ -70,11 +69,12 @@ class ButtonWidget extends StatelessWidget {
         filho = child;
       } else if (button == Button.x) {
         filho = LayoutBuilder(builder: (context, contraints) {
-          return Center(
-            child: Text(
-              'X',
-              style: GoogleFonts.openSans(textStyle: style),
-            ),
+          return const Center(
+            child: TextWidget(),
+            // child: Text(
+            //   'X',
+            //   style: GoogleFonts.openSans(textStyle: style),
+            // ),
           );
         });
       }
@@ -87,11 +87,14 @@ class ButtonWidget extends StatelessWidget {
         filho = child;
       } else if (button == Button.y) {
         filho = LayoutBuilder(builder: (context, contraints) {
-          return Center(
-            child: Text(
-              'Y',
-              style: GoogleFonts.openSans(textStyle: style),
+          return const Center(
+            child: TextWidget(
+              text: MyTextButton.y,
             ),
+            // child: Text(
+            //   'Y',
+            //   style: GoogleFonts.openSans(textStyle: style),
+            // ),
           );
         });
       }
@@ -105,10 +108,8 @@ class ButtonWidget extends StatelessWidget {
       } else if (button == Button.b) {
         filho = Center(
           child: LayoutBuilder(builder: (context, contraints) {
-            return Text(
-              'B',
-              textAlign: TextAlign.center,
-              style: GoogleFonts.openSans(textStyle: style),
+            return const TextWidget(
+              text: MyTextButton.b,
             );
           }),
         );
@@ -122,11 +123,8 @@ class ButtonWidget extends StatelessWidget {
         filho = child;
       } else if (button == Button.a) {
         filho = LayoutBuilder(builder: (context, contraints) {
-          return Center(
-            child: Text(
-              'A',
-              style: GoogleFonts.openSans(textStyle: style),
-            ),
+          return const Center(
+            child: TextWidget(text: MyTextButton.a),
           );
         });
       }

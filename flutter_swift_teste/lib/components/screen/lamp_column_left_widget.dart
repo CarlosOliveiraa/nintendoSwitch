@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_swift_teste/components/lamp_widget.dart';
 
-//CORRESPONDE A COLUNA DE WIDGETS LAMP COM AS LÂMPADAS APAGADAS.
+import 'lamp_widget.dart';
 
-class LampColumnRigth extends StatelessWidget {
-  const LampColumnRigth({Key? key}) : super(key: key);
+//CORRESPONDE A COLUNA DE WIDGETS LAMP COM UMA ÚNICA LAMPADA ACESA.
+class LampColumnLeft extends StatelessWidget {
+  const LampColumnLeft({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +15,10 @@ class LampColumnRigth extends StatelessWidget {
         // ignore: prefer_const_literals_to_create_immutables
         children: [
           const LampWidget(
-            lamp: Lamp.lampOff,
+            lamp: Lamp.lampOn,
           ),
+          //UTILIZAR LOOP COM FOR PARA REPETIÇÃO DE LAMPADA.
+          //FOR(X=0; X>=3; X++)
           const LampWidget(
             lamp: Lamp.lampOff,
           ),
