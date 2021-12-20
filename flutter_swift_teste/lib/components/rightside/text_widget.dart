@@ -21,6 +21,7 @@ class TextWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     late Text textButton;
 
     switch (text) {
@@ -52,8 +53,9 @@ class TextWidget extends StatelessWidget {
     }
 
     return Container(
-      width: width,
-      height: height,
+      alignment: Alignment.center,
+      width: size.width * 0.32,
+      height: size.height * 0.71,
       child: textButton,
     );
   }

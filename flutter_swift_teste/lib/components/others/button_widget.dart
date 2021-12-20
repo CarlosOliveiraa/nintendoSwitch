@@ -25,6 +25,7 @@ class ButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     var gradientBack;
     var gradientFront;
     late Widget filho;
@@ -130,8 +131,8 @@ class ButtonWidget extends StatelessWidget {
       }
     }
     return Container(
-      width: size,
-      height: size,
+      width: size.width * 0.22,
+      height: size.height * 0.10,
       alignment: Alignment.center,
       decoration: BoxDecoration(
         gradient: gradientBack,
