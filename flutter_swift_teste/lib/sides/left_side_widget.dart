@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter_swift_teste/components/others/analog.dart';
 
 import '../components/leftside/arrow_widget.dart';
 import '../components/leftside/minus_button_widget.dart';
@@ -20,34 +22,28 @@ class LeftSideWidget extends StatelessWidget {
 
     //CRIAR UM PADDING RESPONSÍVEL.
     //CALUCULAR O VALOR DA LARGRURA DO ESPAÇAMENTO DIVIDIDO PELA LARGURA DA LADO = 12 / 375
-    return SizedBox(
-      width: width,
-      height: height,
-      child: Stack(
-        children: [
-          Column(
-            children: [
-              LayoutBuilder(builder: (context, constraints) {
-                return Align(
-                  child: MinusButtonWidget(
-                    width: size.width * 0.05,
-                  ),
-                  alignment: Alignment.topLeft,
-                );
-              }),
-              LayoutBuilder(builder: (context, constraints) {
-                return Align(
-                  child: ButtonWidget(
-                    size: constraints.maxWidth * 0.29,
-                    button: Button.up,
-                    child: const ArrowWidget(Direction.up),
-                  ),
-                  alignment: Alignment.bottomCenter,
-                );
-              }),
-            ],
-          ),
-        ],
+    return Padding(
+      padding: EdgeInsets.all(size.width * 0.032),
+      child: SizedBox(
+        width: width,
+        height: height,
+        child: Column(
+          children: [
+            const Align(
+              child: MinusButtonWidget(),
+              alignment: Alignment.topLeft,
+            ),
+            LayoutBuilder(builder: (context, constraints) {
+              return SizedBox(
+                width: constraints.maxWidth * 0.91,
+                height: constraints.maxHeight * 0.68,
+                child: AnalogButtonWidget(
+                  size: constraints.maxWidth * 0.66,
+                ),
+              );
+            })
+          ],
+        ),
       ),
     );
   }

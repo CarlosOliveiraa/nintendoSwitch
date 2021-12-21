@@ -14,6 +14,7 @@ class ArrowWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //final size = MediaQuery.of(context).size;
     late int directionArrow;
 
     switch (direction) {

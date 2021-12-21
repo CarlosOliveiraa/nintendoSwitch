@@ -57,8 +57,11 @@ class _HomePageState extends State<HomePage> {
                   width: size.width * 0.32,
                   height: size.height * 0.38,
                   side: Side.left,
-                  child: const Center(
-                    child: LeftSideWidget(),
+                  child: Center(
+                    child: LeftSideWidget(
+                      width: size.width * 0.77,
+                      height: size.height * 0.89,
+                    ),
                   ),
                   // child: Stack(
                   //   // ignore: prefer_const_literals_to_create_immutables
