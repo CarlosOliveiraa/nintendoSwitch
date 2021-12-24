@@ -3,60 +3,50 @@ import 'package:flutter/material.dart';
 enum MyTextButton { x, y, b, a }
 
 class TextWidget extends StatelessWidget {
-  final double width;
-  final double height;
+  final double size;
+  final Color color;
   final MyTextButton text;
-  final style = const TextStyle(
-    fontSize: 15,
-    fontWeight: FontWeight.w300,
-    color: Color(0xffFFFFFF),
-  );
 
   const TextWidget({
     Key? key,
-    this.width = 9,
-    this.height = 20,
     this.text = MyTextButton.x,
+    this.size = 28,
+    this.color = Colors.white70,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-    late Text textButton;
+    String textButton;
 
     switch (text) {
       case MyTextButton.x:
-        textButton = Text(
-          'X',
-          style: style,
-        );
+        textButton = 'X';
         break;
       case MyTextButton.y:
-        textButton = Text(
-          'Y',
-          style: style,
-        );
+        textButton = 'Y';
+
         break;
       case MyTextButton.b:
-        textButton = Text(
-          'B',
-          style: style,
-        );
+        textButton = 'B';
+
         break;
       case MyTextButton.a:
-        textButton = Text(
-          'A',
-          style: style,
-        );
+        textButton = 'A';
         break;
       default:
+        textButton = 'X';
     }
 
     return Container(
       alignment: Alignment.center,
-      width: size.width * 0.32,
-      height: size.height * 0.71,
-      child: textButton,
+      width: size,
+      height: size,
+      child: Text(
+        textButton,
+        style: TextStyle(
+          fontSize: size * 0.06,
+        ),
+      ),
     );
   }
 }

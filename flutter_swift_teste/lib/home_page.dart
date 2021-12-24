@@ -5,6 +5,7 @@ import 'components/others/analog.dart';
 import 'components/others/button_widget.dart';
 import 'components/rightside/home_widget.dart';
 import 'components/rightside/plus_button_widget.dart';
+import 'components/rightside/right_side_widget.dart';
 import 'components/screen/lamp_column_left_widget.dart';
 import 'components/screen/lamp_column_rigth_widget.dart';
 import 'components/screen/logo_widget.dart';
@@ -140,67 +141,68 @@ class _HomePageState extends State<HomePage> {
                   width: size.width * 0.32,
                   height: size.height * 0.38,
                   side: Side.right,
-                  child: Stack(
-                    // ignore: prefer_const_literals_to_create_immutables
-                    children: [
-                      const Positioned(
-                        top: 8.16,
-                        left: 88.77,
-                        right: 13.59,
-                        bottom: 230.19,
-                        child: PlusButtonWidget(),
-                      ),
-                      const Positioned(
-                        top: 32.62,
-                        left: 43.03,
-                        right: 52.08,
-                        bottom: 196.66,
-                        child: ButtonWidget(
-                          button: Button.x,
-                        ),
-                      ),
-                      const Positioned(
-                        top: 60.27,
-                        left: 14.49,
-                        right: 80.62,
-                        bottom: 169.02,
-                        child: ButtonWidget(
-                          button: Button.y,
-                        ),
-                      ),
-                      const Positioned(
-                        top: 60.27,
-                        left: 72.92,
-                        right: 22.19,
-                        bottom: 169.02,
-                        child: ButtonWidget(
-                          button: Button.a,
-                        ),
-                      ),
-                      const Positioned(
-                        top: 87.91,
-                        left: 43.03,
-                        right: 52.08,
-                        bottom: 141.37,
-                        child: ButtonWidget(
-                          button: Button.b,
-                        ),
-                      ),
-                      const Positioned(
-                        top: 131.86,
-                        left: 28.53,
-                        right: 37.59,
-                        bottom: 68.42,
-                        child: AnalogButtonWidget(),
-                      ),
-                      const Positioned(
-                          top: 217.95,
-                          left: 80.16,
-                          right: 14.04,
-                          bottom: 10.42,
-                          child: HomeWidget()),
-                    ],
-                  ),
+                  child: const RigthSideWidget(),
+                  // child: Stack(
+                  //   // ignore: prefer_const_literals_to_create_immutables
+                  //   children: [
+                  //     const Positioned(
+                  //       top: 8.16,
+                  //       left: 88.77,
+                  //       right: 13.59,
+                  //       bottom: 230.19,
+                  //       child: PlusButtonWidget(),
+                  //     ),
+                  //     const Positioned(
+                  //       top: 32.62,
+                  //       left: 43.03,
+                  //       right: 52.08,
+                  //       bottom: 196.66,
+                  //       child: ButtonWidget(
+                  //         button: Button.x,
+                  //       ),
+                  //     ),
+                  //     const Positioned(
+                  //       top: 60.27,
+                  //       left: 14.49,
+                  //       right: 80.62,
+                  //       bottom: 169.02,
+                  //       child: ButtonWidget(
+                  //         button: Button.y,
+                  //       ),
+                  //     ),
+                  //     const Positioned(
+                  //       top: 60.27,
+                  //       left: 72.92,
+                  //       right: 22.19,
+                  //       bottom: 169.02,
+                  //       child: ButtonWidget(
+                  //         button: Button.a,
+                  //       ),
+                  //     ),
+                  //     const Positioned(
+                  //       top: 87.91,
+                  //       left: 43.03,
+                  //       right: 52.08,
+                  //       bottom: 141.37,
+                  //       child: ButtonWidget(
+                  //         button: Button.b,
+                  //       ),
+                  //     ),
+                  //     const Positioned(
+                  //       top: 131.86,
+                  //       left: 28.53,
+                  //       right: 37.59,
+                  //       bottom: 68.42,
+                  //       child: AnalogButtonWidget(),
+                  //     ),
+                  //     const Positioned(
+                  //         top: 217.95,
+                  //         left: 80.16,
+                  //         right: 14.04,
+                  //         bottom: 10.42,
+                  //         child: HomeWidget()),
+                  //   ],
+                  // ),
                 )
               ],
             )

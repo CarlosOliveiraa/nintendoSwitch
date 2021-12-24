@@ -7,6 +7,9 @@ import '../rightside/text_widget.dart';
 enum Button { up, left, down, right, x, y, b, a }
 
 class ButtonWidget extends StatelessWidget {
+  final Color fisrtColor;
+  final Color secondColor;
+  final Color thirdColor;
   final Button button;
   final double size;
   final Widget child;
@@ -21,6 +24,9 @@ class ButtonWidget extends StatelessWidget {
     this.size = 28.08,
     required this.button,
     this.child = const SizedBox(),
+    this.fisrtColor = const Color(0xff050F11),
+    this.secondColor = const Color(0xff7B8287),
+    this.thirdColor = const Color(0xff7B8287),
   }) : super(key: key);
 
   @override

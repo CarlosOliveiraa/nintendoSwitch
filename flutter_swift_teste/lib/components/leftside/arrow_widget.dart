@@ -5,11 +5,13 @@ enum Direction { up, left, down, right }
 class ArrowWidget extends StatelessWidget {
   final double size;
   final Direction direction;
+  final Color inColor;
 
   const ArrowWidget(
     this.direction, {
     Key? key,
     this.size = 9,
+    this.inColor = const Color(0xff182022),
   }) : super(key: key);
 
   @override
@@ -42,7 +44,7 @@ class ArrowWidget extends StatelessWidget {
           child: Container(
             width: size,
             height: size,
-            color: const Color(0xff182022),
+            color: inColor,
           ),
         ),
       ),

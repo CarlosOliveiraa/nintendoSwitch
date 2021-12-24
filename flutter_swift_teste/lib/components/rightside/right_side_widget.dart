@@ -1,38 +1,34 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_swift_teste/components/leftside/arrow_widget.dart';
-import 'package:flutter_swift_teste/components/leftside/sound_widget.dart';
 import 'package:flutter_swift_teste/components/others/analog.dart';
 import 'package:flutter_swift_teste/components/others/button_widget.dart';
 import 'package:flutter_swift_teste/components/others/buttons.dart';
+import 'package:flutter_swift_teste/components/rightside/home_widget.dart';
+import 'package:flutter_swift_teste/components/rightside/plus_button_widget.dart';
 
-import '../components/leftside/minus_button_widget.dart';
-
-class LeftSideWidget extends StatelessWidget {
+class RigthSideWidget extends StatelessWidget {
   final double width;
-  final double height;
+  final double heigth;
 
-  const LeftSideWidget({
+  const RigthSideWidget({
     Key? key,
     this.width = 95,
-    this.height = 231,
+    this.heigth = 231,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
 
-    //CRIAR UM PADDING RESPONSÍVEL.
-    //CALUCULAR O VALOR DA LARGRURA DO ESPAÇAMENTO DIVIDIDO PELA LARGURA DA LADO = 12 / 375
     return Padding(
       padding: EdgeInsets.all(size.width * 0.032),
       child: Stack(
         children: [
           Align(
-            child: MinusButtonWidget(
+            child: PlusButtonWidget(
               width: size.width * 0.05,
             ),
-            alignment: Alignment.topLeft,
+            alignment: Alignment.topRight,
           ),
           Align(
             alignment: Alignment.bottomCenter,
@@ -42,33 +38,28 @@ class LeftSideWidget extends StatelessWidget {
                 AnalogButtonWidget(
                   size: size.height * 0.08,
                 ),
-                Buttons(
+                const Buttons(
                   topChild: ButtonWidget(
-                    size: size.width * 0.07,
-                    button: Button.up,
-                    child: const ArrowWidget(Direction.up),
+                    button: Button.x,
                   ),
-                  leftChild: const ButtonWidget(
-                    button: Button.left,
-                    child: ArrowWidget(Direction.left),
+                  leftChild: ButtonWidget(
+                    button: Button.y,
                   ),
-                  downChild: const ButtonWidget(
-                    button: Button.down,
-                    child: ArrowWidget(Direction.down),
+                  rightChild: ButtonWidget(
+                    button: Button.a,
                   ),
-                  rightChild: const ButtonWidget(
-                    button: Button.right,
-                    child: ArrowWidget(Direction.right),
+                  downChild: ButtonWidget(
+                    button: Button.b,
                   ),
                 ),
               ],
             ),
           ),
           Align(
-            child: SoundWidget(
-              size: size.height * 0.03,
+            child: HomeWidget(
+              size: size.height * 0.04,
             ),
-            alignment: Alignment.bottomLeft,
+            alignment: Alignment.bottomRight,
           )
         ],
       ),
