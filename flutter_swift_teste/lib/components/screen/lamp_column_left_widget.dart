@@ -8,8 +8,10 @@ class LampColumnLeft extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 43.5,
+    final size = MediaQuery.of(context).size;
+
+    return SizedBox(
+      height: size.height * 0.06,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         // ignore: prefer_const_literals_to_create_immutables

@@ -44,7 +44,8 @@ class TextWidget extends StatelessWidget {
       child: Text(
         textButton,
         style: TextStyle(
-          fontSize: size * 0.06,
+          color: color,
+          fontSize: size * 0.6,
         ),
       ),
     );

@@ -28,8 +28,6 @@ class Buttons extends StatelessWidget {
             children: [
               Positioned(
                 top: 0,
-                left: 0,
-                right: 0,
                 child: Center(
                   child: SizedBox(
                     width: constraints.maxWidth * 0.31,
@@ -39,8 +37,6 @@ class Buttons extends StatelessWidget {
                 ),
               ),
               Positioned(
-                top: 0,
-                bottom: 0,
                 left: 0,
                 child: Center(
                   child: SizedBox(
@@ -51,9 +47,7 @@ class Buttons extends StatelessWidget {
                 ),
               ),
               Positioned(
-                top: 0,
                 right: 0,
-                bottom: 0,
                 child: Center(
                   child: SizedBox(
                     width: constraints.maxWidth * 0.31,
@@ -64,8 +58,6 @@ class Buttons extends StatelessWidget {
               ),
               Positioned(
                 bottom: 0,
-                left: 0,
-                right: 0,
                 child: Center(
                   child: SizedBox(
                     width: constraints.maxWidth * 0.30,

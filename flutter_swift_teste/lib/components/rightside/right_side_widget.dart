@@ -1,19 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_swift_teste/components/leftside/arrow_widget.dart';
-import 'package:flutter_swift_teste/components/others/analog.dart';
-import 'package:flutter_swift_teste/components/others/button_widget.dart';
-import 'package:flutter_swift_teste/components/others/buttons.dart';
-import 'package:flutter_swift_teste/components/rightside/home_widget.dart';
-import 'package:flutter_swift_teste/components/rightside/plus_button_widget.dart';
+
+import '../others/analog.dart';
+import '../others/button_widget.dart';
+import '../others/buttons.dart';
+import 'home_widget.dart';
+import 'plus_button_widget.dart';
 
 class RigthSideWidget extends StatelessWidget {
-  final double width;
-  final double heigth;
-
   const RigthSideWidget({
     Key? key,
-    this.width = 95,
-    this.heigth = 231,
   }) : super(key: key);
 
   @override
@@ -31,13 +26,8 @@ class RigthSideWidget extends StatelessWidget {
             alignment: Alignment.topRight,
           ),
           Align(
-            alignment: Alignment.bottomCenter,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                AnalogButtonWidget(
-                  size: size.height * 0.08,
-                ),
                 const Buttons(
                   topChild: ButtonWidget(
                     button: Button.x,
@@ -51,6 +41,9 @@ class RigthSideWidget extends StatelessWidget {
                   downChild: ButtonWidget(
                     button: Button.b,
                   ),
+                ),
+                AnalogButtonWidget(
+                  size: size.height * 0.08,
                 ),
               ],
             ),
