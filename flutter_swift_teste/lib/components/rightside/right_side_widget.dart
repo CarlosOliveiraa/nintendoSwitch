@@ -26,7 +26,9 @@ class RigthSideWidget extends StatelessWidget {
             alignment: Alignment.topRight,
           ),
           Align(
+            alignment: Alignment.bottomLeft,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 const Buttons(
                   topChild: ButtonWidget(

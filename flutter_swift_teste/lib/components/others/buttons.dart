@@ -20,54 +20,85 @@ class Buttons extends StatelessWidget {
 
     return SizedBox(
       width: size.width * 0.23,
-      height: size.height * 0.23,
+      height: size.width * 0.23,
       child: LayoutBuilder(
         builder: (context, constraints) {
-          return Stack(
-            alignment: Alignment.center,
-            children: [
-              Positioned(
-                top: 0,
-                child: Center(
-                  child: SizedBox(
-                    width: constraints.maxWidth * 0.31,
-                    height: constraints.maxHeight * 0.31,
-                    child: topChild,
-                  ),
+          return Center(
+            child: Column(
+              children: [
+                SizedBox(
+                  width: constraints.maxWidth * .31,
+                  height: constraints.maxHeight * .31,
+                  child: topChild,
                 ),
-              ),
-              Positioned(
-                left: 0,
-                child: Center(
-                  child: SizedBox(
-                    width: constraints.maxWidth * 0.31,
-                    height: constraints.maxHeight * 0.31,
-                    child: leftChild,
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SizedBox(
+                      width: constraints.maxWidth * .31,
+                      height: constraints.maxHeight * .31,
+                      child: leftChild,
+                    ),
+                    SizedBox(
+                      width: constraints.maxWidth * .31,
+                      height: constraints.maxHeight * .31,
+                      child: rightChild,
+                    ),
+                  ],
                 ),
-              ),
-              Positioned(
-                right: 0,
-                child: Center(
-                  child: SizedBox(
-                    width: constraints.maxWidth * 0.31,
-                    height: constraints.maxHeight * 0.31,
-                    child: rightChild,
-                  ),
-                ),
-              ),
-              Positioned(
-                bottom: 0,
-                child: Center(
-                  child: SizedBox(
-                    width: constraints.maxWidth * 0.30,
-                    height: constraints.maxHeight * 0.30,
-                    child: downChild,
-                  ),
-                ),
-              ),
-            ],
+                SizedBox(
+                  width: constraints.maxWidth * .31,
+                  height: constraints.maxHeight * .31,
+                  child: downChild,
+                )
+              ],
+            ),
           );
+          // return Stack(
+          //   alignment: Alignment.center,
+          //   children: [
+          //     Positioned(
+          //       top: 0,
+          //       child: Center(
+          //         child: SizedBox(
+          //           width: constraints.maxWidth * 0.31,
+          //           height: constraints.maxHeight * 0.31,
+          //           child: topChild,
+          //         ),
+          //       ),
+          //     ),
+          //     Positioned(
+          //       left: 0,
+          //       child: Center(
+          //         child: SizedBox(
+          //           width: constraints.maxWidth * 0.31,
+          //           height: constraints.maxHeight * 0.31,
+          //           child: leftChild,
+          //         ),
+          //       ),
+          //     ),
+          //     Positioned(
+          //       right: 0,
+          //       child: Center(
+          //         child: SizedBox(
+          //           width: constraints.maxWidth * 0.31,
+          //           height: constraints.maxHeight * 0.31,
+          //           child: rightChild,
+          //         ),
+          //       ),
+          //     ),
+          //     Positioned(
+          //       bottom: 0,
+          //       child: Center(
+          //         child: SizedBox(
+          //           width: constraints.maxWidth * 0.30,
+          //           height: constraints.maxHeight * 0.30,
+          //           child: downChild,
+          //         ),
+          //       ),
+          //     ),
+          //   ],
+          // );
         },
       ),
     );

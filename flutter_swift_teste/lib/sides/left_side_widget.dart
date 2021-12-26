@@ -26,6 +26,43 @@ class LeftSideWidget extends StatelessWidget {
     //CALUCULAR O VALOR DA LARGRURA DO ESPAÇAMENTO DIVIDIDO PELA LARGURA DA LADO = 12 / 375
     return Padding(
       padding: EdgeInsets.all(size.width * 0.032),
+      // child: Column(
+      //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      //   crossAxisAlignment: CrossAxisAlignment.start,
+      //   children: [
+      //     MinusButtonWidget(width: size.width * 0.05),
+      //     Column(
+      //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //       children: [
+      //         AnalogButtonWidget(
+      //           size: size.height * 0.08,
+      //         ),
+      //         Buttons(
+      //             topChild: ButtonWidget(
+      //               size: size.width * 0.07,
+      //               button: Button.up,
+      //               child: const ArrowWidget(Direction.up),
+      //             ),
+      //             leftChild: ButtonWidget(
+      //               size: size.width * 0.07,
+      //               button: Button.left,
+      //               child: const ArrowWidget(Direction.left),
+      //             ),
+      //             downChild: ButtonWidget(
+      //               size: size.width * 0.07,
+      //               button: Button.down,
+      //               child: const ArrowWidget(Direction.down),
+      //             ),
+      //             rightChild: ButtonWidget(
+      //               size: size.width * 0.07,
+      //               button: Button.right,
+      //               child: const ArrowWidget(Direction.right),
+      //             )),
+      //       ],
+      //     ),
+      //     SoundWidget(size: size.height * 0.03),
+      //   ],
+      // ),
       child: Stack(
         children: [
           Align(
