@@ -31,22 +31,12 @@ class RigthSideWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 const Buttons(
-                  topChild: ButtonWidget(
-                    button: Button.x,
-                  ),
-                  leftChild: ButtonWidget(
-                    button: Button.y,
-                  ),
-                  rightChild: ButtonWidget(
-                    button: Button.a,
-                  ),
-                  downChild: ButtonWidget(
-                    button: Button.b,
-                  ),
+                  topChild: ButtonWidget(button: Button.x),
+                  leftChild: ButtonWidget(button: Button.y),
+                  rightChild: ButtonWidget(button: Button.a),
+                  downChild: ButtonWidget(button: Button.b),
                 ),
-                AnalogButtonWidget(
-                  size: size.height * 0.08,
-                ),
+                AnalogButtonWidget(size: size.height * 0.08),
               ],
             ),
           ),
